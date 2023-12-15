@@ -79,11 +79,6 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - name: upload artifacts
-        uses: actions/upload-pages-artifact@v1
-        with: 
-          path: "./out"
-
-      - name: deploy
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v3
